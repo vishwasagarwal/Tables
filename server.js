@@ -8,6 +8,7 @@ require('dotenv').config()
 
 //routes
 const AuthRoute = require('./routes/auth');
+const TableRoute = require('./routes/table');
 
 //app 
 const app = express()
@@ -25,6 +26,7 @@ if(process.env.NODE_ENV == 'development')
 }
 //routes 
 app.use('/api',AuthRoute);
+app.use('/api',TableRoute);
 
 
 const port = process.env.PORT || 8000
